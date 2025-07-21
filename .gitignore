@@ -1,0 +1,5 @@
+# VitePress 缓存文件
+docs/.vitepress/cache/
+
+# Node.js 依赖包
+node_modules/
