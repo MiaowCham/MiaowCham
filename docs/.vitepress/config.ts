@@ -4,6 +4,7 @@ export default defineConfig({
   title: '喵锵的个人站',
   description: '喵锵的项目/文档中心',
   base: '/',
+  ignoreDeadLinks: true,
   head: [
     ['link', { rel: 'icon', href: '/pictures/logo.png' }]
   ],
