@@ -11,7 +11,7 @@ hero:
 
   actions:
     - theme: brand
-      text: 我的原创设定与世界观
+      text: 原创设定与世界观
       link: https://oc.miaowcham.top/
     - theme: alt
       text: 个人项目
