@@ -13,7 +13,7 @@
 >[!note]  
 >本工具已实现所有预期功能，故即将归档仓库（**可能**会最后更新对 LQE 的支持）  
 >遇到问题请不要提交 issues 或 PR（~~反正也没人理~~  
->若需要更新支持，请关注 @ranhengzhang 和 @apoint123 的多格式转换工具
+>若需要更新支持，请关注 [@ranhengzhang](https://github.com/ranhengzhang) 和 [@apoint123](https://github.com/apoint123) 的多格式转换工具
 
 **一个适用于 TTML (AMLL标准) 文件转 Lyricify Syllable 的小工具**
 
@@ -29,11 +29,11 @@ TTML (AMLL标准) 是 AMLL 默认使用的歌词文件；Lyricify Syllable 是 L
 
 现在，一拖、一按，即可完成规范化转换！甚至可以提取翻译并单独输出。
 
-###### 详细信息请见 [提示词及转换原理](/Prompt_words_&_Conversion_principles.md)
+###### 详细信息请见 [提示词及转换原理](https://github.com/miaowcham/TTML_to_Lyricify_Syllable_Tool/blob/main/Prompt_words_&_Conversion_principles.md)
 
 ## TTML to Lyricify Syllable GUI
 基于 `tkinter` 实现的基础 GUI 功能，通过 `PyInstaller` 进行打包构建
->~终于不用对着黑框框转换了~
+>~~终于不用对着黑框框转换了~~
 
 ### 您可以访问 [Release](https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/releases/) 下载 Release 版或前往 [Github Action](https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/actions/workflows/build.yml) 下载最新构建版
 
