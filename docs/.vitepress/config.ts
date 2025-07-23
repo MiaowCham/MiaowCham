@@ -11,6 +11,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/pictures/logo.png',
+    // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
       { text:'原创设定集', link:'https://oc.miaowcham.top/'},
@@ -18,7 +19,10 @@ export default defineConfig({
       { text: '个人项目', link: '/Project' },
     ],
 
+    // 侧边栏
     sidebar: {
+
+      // 项目文档
       '/Project/':[
         { text: '个人项目', 
           items: [
@@ -67,6 +71,8 @@ export default defineConfig({
           ],
         },
       ],
+
+      // 个人文档
       'docs': [
         { text: '个人文档',
           items: [
@@ -95,6 +101,8 @@ export default defineConfig({
         },
       ],
     },
+
+    // 顶部图标链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/MiaowCham/MiaowCham' },
       { icon: 'qq', link: 'https://qm.qq.com/q/qjU8Nm72fe', ariaLabel: 'QQ' },
@@ -137,7 +145,7 @@ export default defineConfig({
     },
 
     notFound: {
-      title: '页面未找到',
+      title: '页面被小猫吃掉了',
       quote:
         '当你迷失方向的时候，试着循着光前进！',
       linkLabel: '前往首页',
