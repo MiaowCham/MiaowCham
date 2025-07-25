@@ -73,7 +73,7 @@ However, in the latter half of the year, I'll be heading to Qingdao, Shandong, C
       if (data.from_who || data.from) {
         const author = data.from_who || ''
         const source = data.from || ''
-        const attribution = author && source ? `${author}「${source}」` : (author || source)
+        const attribution = author && source ? `${author}「${source}」` : (author || (source ? `「${source}」` : ''))
         content += `\n—— ${attribution}`
       }
       
