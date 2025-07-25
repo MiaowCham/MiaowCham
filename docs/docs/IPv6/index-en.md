@@ -35,14 +35,14 @@ IPv6 requires both network and hardware support to function properly.
 1. Open the **Control Panel** → **Network and Internet** → **Network and Sharing Center**.  
 2. Click **Change adapter settings** on the left to open the **Network Connections** page.  
 
-![Network Connections](/IPv6/Network-connection.png)  
+<img src="/IPv6/Network-connection.png" alt="Network Connections" data-clickable />  
 
 Locate your active network connection (e.g., **WLAN** for Wi-Fi or **Ethernet** for wired connections).  
 
 Right-click the connection and select **Properties**. Ensure **Internet Protocol Version 6 (TCP/IPv6)** is checked.  
 > If this option is missing, your network adapter may not support IPv6. Check your adapter specifications.  
 
-![Network Properties](/IPv6/Network-attributes.png)  
+<img src="/IPv6/Network-attributes.png" alt="Network Properties" data-clickable />  
 
 ---
 
@@ -60,7 +60,7 @@ If all tests pass, your network supports IPv6. Otherwise, proceed with the follo
 1. Access your router’s admin page (check the router’s label for the address).  
 2. Navigate to **Advanced Settings** → **Network Settings** → **IPv6** and enable IPv6.  
 
-![Router](/IPv6/Router.png)  
+<img src="/IPv6/Router.png" alt="Router" data-clickable />  
 
 Save changes. If IPv6 still fails, check your optical modem settings.  
 
@@ -71,7 +71,7 @@ For direct connections or unresolved router issues:
 1. Access the modem’s admin page (typically `192.168.1.1`; credentials are on the modem label).  
 2. Go to **Status** → **Network Information** → **IPv6 Connection Details**. If no IPv6 data appears, contact your ISP.  
 
-![Optical Modem](/IPv6/ONT.png)  
+<img src="/IPv6/ONT.png" alt="Optical Modem" data-clickable />  
 
 > [!NOTE]  
 > ISPs now use dynamic admin passwords, rendering older tutorials obsolete.  
@@ -115,4 +115,4 @@ If issues persist, double-check all steps to ensure proper IPv6 configuration.
 
 ## License  
 This document is licensed under **CC0-1.0**.  
-You may freely use, modify, and distribute its contents.  
+You may freely use, modify, and distribute its contents.

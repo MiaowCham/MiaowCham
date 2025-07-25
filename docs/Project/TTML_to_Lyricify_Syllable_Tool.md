@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/pictures/TTML_to_Lyricify_Syllable_Tool-icon.ico" width="28%" alt="icon" /><br>
+  <img src="/pictures/TTML_to_Lyricify_Syllable_Tool-icon.ico" width="28%" alt="icon" data-clickable /><br>
   <h1>TTML to Lyricify Syllable Tool</h1><br>
 </div>
 <div style="white-space: nowrap; display: flex; flex-wrap: nowrap; gap: 5px; justify-content: center;">

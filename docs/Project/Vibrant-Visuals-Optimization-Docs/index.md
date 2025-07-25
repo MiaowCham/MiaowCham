@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/pictures/vvo.png" width="80%" alt="png" />
+<img src="/pictures/vvo.png" width="80%" alt="png" data-clickable />
 
 # Vibrant Visuals Optimization
 

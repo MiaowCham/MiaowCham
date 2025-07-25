@@ -1,4 +1,4 @@
-<div align="center"><img src="/pictures/hitokoto-icon.ico" width="30%" alt="icon" /><h1>一言(Hitokoto)命令行工具</h1></div>
+<div align="center"><img src="/pictures/hitokoto-icon.ico" width="30%" alt="icon"  data-clickable  /><h1>一言(Hitokoto)命令行工具</h1></div>
 <br>
 <div style="white-space: nowrap; display: flex; flex-wrap: nowrap; gap: 5px; justify-content: center;">
   <a href="https://github.com/MiaowCham/Hitokoto-cli/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0-blue.svg" alt="cc0" style="display: inline-block;"></a>
