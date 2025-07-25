@@ -8,12 +8,12 @@
 
 ### 在进行转换前，请先准备以下内容：
 - VSCode with Copilot
-- [ATT 制作的 TTML](./AMLL-TTML.ttml)
+- [ATT 制作的 TTML](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/AMLL-TTML.ttml)
 
 ### 如果你希望根据歌曲结构进行分段，你还需要以下内容：
 
-- [包含歌曲结构标签的纯文本歌词](/docs/Lyric%20Booklets/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.txt)
-- [一个带分段的标准 Apple Syllable（格式化版本）](./三Z-Studio,%20HOYO-MiX,%20雷雨心%20-%20制服·剪刀·鲨鱼尾_Format.ttml)
+- [包含歌曲结构标签的纯文本歌词](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/docs/Lyric%20Booklets/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.txt)
+- [一个带分段的标准 Apple Syllable（格式化版本）](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/三Z-Studio,%20HOYO-MiX,%20雷雨心%20-%20制服·剪刀·鲨鱼尾_Format.ttml)
     - 这不是必须的，但有一份已经完成的标准版本的话，可能会让 AI 更加精确的修改你的文档
 
 ## 预先编辑
@@ -28,7 +28,7 @@
 在把 TTML 文件丢给格式化工具前，你需要用 VSCode 的替换功能把文档中的 `</span> <span` 替换成 `</span><space/><span`  
 因为 Apple Syllable 会通过 `<span>` 标签之间的空格来充当单词直接的空格，而格式化工具通常会把这些空格给破坏掉。提前将空格转换成自己喜欢的标签是最佳选择
 
-然后你就可以得到 [格式化后的歌词](./Format.ttml)
+然后你就可以得到 [格式化后的歌词](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/Format.ttml)
 
 ### 人工处理
 在把文件交付给 AI 编辑前，你可以自己先将其初步 “Apple 化”
@@ -37,7 +37,7 @@
     - 将其中的 AMLL 命名空间 `xmlns:amll="http://www.example.com/ns/amll"` 去除
     - 在 itunes 命名空间后添加歌词类型标记，类似：`itunes:timing="Word" xml:lang="en"`
     - 完成处理的 `<tt>` 标签应该和下方的例子差不多：
-    ```
+    ```xml
     <tt
         xmlns="http://www.w3.org/ns/ttml"
         xmlns:ttm="http://www.w3.org/ns/ttml#metadata"
@@ -46,7 +46,7 @@
 - 然后是 `<head>` 标签
     - 在 head > metadata 标签下会有一些使用 amll 命名空间的元数据，类似：`<amll:meta key="qqMusicId" value="002lWTZR2zfSFX"/>`。将其全部删除
     - 如果歌词的歌曲实际的演唱者不止两个，请按照 Apple 官方规范在 `<metadata>` 中标记演唱者，并同步修改 `<body>` 中歌词行 `<p>` 标签的 `ttm:agent` 属性
-        - 具体可以参考 [这份歌词](./苏逸_Suyi,爆裂菊是也,小N%20-%20别忘记查收关心！_Format.ttml)
+        - 具体可以参考 [这份歌词](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸_Suyi,爆裂菊是也,小N%20-%20别忘记查收关心！_Format.ttml)
         - 这不是必须的，虽然 Apple 官方规范要求你这么做，但绝大部分官方歌词都没有做到这点
 - 删除时间轴的前导零（也就是时间轴高位的 0）
     - 你可以使用 VSCode 的替换功能，依次替换：
@@ -74,7 +74,7 @@
 ATT 输出的 TTML 在 `<p>` 标签中，行数和演唱者标记是和 Apple 官方歌词相反的，可以给他调转一下。当然这不是必须的
 
 **提示词：**
-```
+```prompt
 帮我把 p 标签里的 ttm:agent="v1" 和 itunes:key="L22" 调个位置，
 变成 itunes:key="L22" ttm:agent="v1"
 ```
@@ -105,7 +105,7 @@ Apple 在 WWDC25 上发布的新版 Apple Music 已经支持翻译功能，但�
 ---
 
 **提示词：**
-```
+```prompt
 现在这个ttml歌词字幕的句子翻译在 body > div > p > span ttm:role="translation" 里，
 我需要你帮我把它从这个位置移动到 head > metadata > iTunesMetadata > translations > translation > text 里
 格式为：
@@ -133,7 +133,7 @@ Apple 会根据歌曲结构将 `<div>` 分段。手动分段是很麻烦的事�
     `三Z-Studio, HOYO-MiX, 雷雨心 - 制服·剪刀·鲨鱼尾_Format.ttml`
 
 **提示词：**
-```
+```prompt
 你可以注意到我在 div 标签中添加了一个 itunes:songPart，
 你帮我根据 #file:lyrics.txt 这个词本对歌词进行分段，每个`#`标记的音乐结构都需要使用独立的 div 标签，需要注意开始和结束时间
 具体效果可以参考 #file:三Z-Studio, HOYO-MiX, 雷雨心 - 制服·剪刀·鲨鱼尾_Format.ttml 
@@ -143,10 +143,10 @@ Apple 会根据歌曲结构将 `<div>` 分段。手动分段是很麻烦的事�
 
 ### 完成！
 如果你根据以上步骤完成修改，那你的歌词现在已经非常 “Apple 化”！  
-比如我们开头举例的歌词，修改后变成了[这个](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver_Format.ttml)
+比如我们开头举例的歌词，修改后变成了[这个](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver_Format.ttml)
 
 建议你在每次 AI 编辑后进行校对，并在完成修改后进行整体校对  
-确保文件无误后，使用格式化工具对其进行压缩，并重新将 `<space/>` 替换回空格，得到[最终成果](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.ttml)
+确保文件无误后，使用格式化工具对其进行压缩，并重新将 `<space/>` 替换回空格，得到[最终成果](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.ttml)
 > 建议同时保存格式化和压缩版本，方便后续查看与编辑
 
 如果你要将歌词提交的话，请将压缩版本提交给 Apple 官方
@@ -183,6 +183,6 @@ Apple Music 在传输时其实并不是直接传输 TTML 原文件，而是套�
     如果包含本地化翻译，请将 `ttml` 改为 `ttmlLocalizations`  
     `unknow_id` 处可填写歌曲的 Apple Music ID
 
-最终效果：[JSON 歌词](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.json)
+最终效果：[JSON 歌词](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.json)
 
 请不要将 JSON 歌词提交给 Apple，这只是为了传输和快捷解析使用的中间格式

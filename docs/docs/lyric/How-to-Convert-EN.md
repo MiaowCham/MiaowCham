@@ -11,11 +11,11 @@ This document will guide you through converting TTML files created by AMLL TTML 
 
 ### Before conversion, prepare the following:
 - VSCode with Copilot
-- [TTML file created by ATT](./AMLL-TTML.ttml)
+- [TTML file created by ATT](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/AMLL-TTML.ttml)
 
 ### If you want segmented lyrics based on song structure, you'll also need:
-- [Plain text lyrics with song structure tags](/docs/Lyric%20Booklets/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.txt)
-- [A segmented standard Apple Syllable file (formatted version)](./三Z-Studio,%20HOYO-MiX,%20雷雨心%20-%20制服·剪刀·鲨鱼尾_Format.ttml)
+- [Plain text lyrics with song structure tags](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/docs/Lyric%20Booklets/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.txt)
+- [A segmented standard Apple Syllable file (formatted version)](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/三Z-Studio,%20HOYO-MiX,%20雷雨心%20-%20制服·剪刀·鲨鱼尾_Format.ttml)
     - Not required, but having a completed standard version helps AI modify your document more accurately
 
 ## Pre-editing
@@ -30,7 +30,7 @@ While AI could theoretically understand compressed files, formatting helps human
 Before formatting your TTML file, replace `</span> <span` with `</span><space/><span` using VSCode's replace function.  
 Apple Syllable uses spaces between `<span>` tags as word separators, and formatting tools often break these spaces. Converting spaces to custom tags first is optimal.
 
-You'll then get [formatted lyrics](./Format.ttml).
+You'll then get [formatted lyrics](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/Format.ttml).
 
 ### Manual Processing
 Make preliminary "Apple-ization" adjustments before AI editing:
@@ -49,7 +49,7 @@ Make preliminary "Apple-ization" adjustments before AI editing:
     - For songs with >2 vocalists: 
         - Tag vocalists in `<metadata>` per Apple specifications
         - Modify `ttm:agent` attributes in lyric line `<p>` tags
-        - Reference [this example](./苏逸_Suyi,爆裂菊是也,小N%20-%20别忘记查收关心！_Format.ttml)
+        - Reference [this example](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸_Suyi,爆裂菊是也,小N%20-%20别忘记查收关心！_Format.ttml)
         - *Note: Optional as most official lyrics omit this*
 - Remove leading zeros in timestamps:
     - Using VSCode replace (without regex):
@@ -145,12 +145,12 @@ Reference implementation: #file:三Z-Studio, HOYO-MiX, 雷雨心 - 制服·剪�
 
 ### Completion!
 After these steps, your lyrics are fully "Apple-ized"!  
-Example output: [Modified lyrics](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver_Format.ttml)
+Example output: [Modified lyrics](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver_Format.ttml)
 
 Always proofread after AI edits. Finalize by:
 1. Compressing the file with a formatter
 2. Replacing `<space/>` back to spaces
-3. Saving as [final version](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.ttml)
+3. Saving as [final version](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.ttml)
 > Keep both formatted and compressed versions for future editing
 
 Submit the compressed version to Apple.
@@ -185,6 +185,6 @@ Apple Music transmits lyrics in JSON-wrapped TTML. To recreate this format:
     For localized translations: Replace `ttml` with `ttmlLocalizations`  
     Replace `unknown_id` with Apple Music song ID
 
-Final output: [JSON lyrics](./苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.json)
+Final output: [JSON lyrics](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/lyrics%20raw%20file/apple%20syllable/苏逸Suyi,%20喵☆酱%20-%20Light%20in%20Abyss%20-%20Full%20ver.json)
 
 *Do not submit JSON to Apple - this is only for transmission/parsing.*
