@@ -79,6 +79,7 @@ export default defineConfig({
             { text: '我创作的文档', link: '/docs/' },
             { text: 'Lyrics Next 格式规范', link: '/docs/lyric/Lyrics_Next' },
             { text: 'Lyricify Syllable Next 格式规范', link: '/docs/lyric/Lyricify_Syllable_Next' },
+            { text: '许可证', link: '/docs/Lincese-Docs'}
           ]
         },
         {
@@ -122,7 +123,8 @@ export default defineConfig({
             resetButtonTitle: '清除查询条件',
             footer: {
               selectText: '选择',
-              navigateText: '切换'
+              navigateText: '切换',
+              closeText: '关闭'
             }
           }
         }
@@ -136,9 +138,7 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页'
     },
-    outline: {
-      label: '页面导航'
-    },
+    outlineTitle: '本页目录',
 
     lastUpdated: {
       text: '最后更新于'
