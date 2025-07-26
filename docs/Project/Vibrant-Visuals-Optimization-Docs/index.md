@@ -7,7 +7,6 @@
 <br>
 <div style="white-space: nowrap; display: flex; flex-wrap: nowrap; gap: 5px; justify-content: center;">
   <a href="https://github.com/MiaowCham/Vibrant-Visuals-Optimization/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0-blue.svg" alt="cc0" style="display: inline-block;"></a>
-  <a href="https://github.com/search?q=repo%3AMiaowCham%2FVibrant-Visuals-Optimization++language%3APython&type=code"><img src="https://img.shields.io/badge/Languages-Python-blue.svg" alt="Static Badge" style="display: inline-block;"></a>
   <a href="https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases"><img src="https://img.shields.io/github/v/release/MiaowCham/Vibrant-Visuals-Optimization" alt="Github Release" style="display: inline-block;"></a>
   <a href="https://github.com/MiaowCham/Vibrant-Visuals-Optimization/actions/workflows/compress-folders.yml"><img src="https://img.shields.io/github/actions/workflow/status/MiaowCham/Vibrant-Visuals-Optimization/.github/workflows/compress-folders.yml" alt="GitHub Actions" style="display: inline-block;"></a>
 </div>
