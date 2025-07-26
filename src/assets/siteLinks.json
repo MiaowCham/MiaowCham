@@ -1,0 +1,31 @@
+[{
+        "icon": "FileWord",
+        "name": "文档中心",
+        "link": "https://docs.miaowcham.top/"
+    },
+    {
+        "icon": "Book",
+        "name": "设定站",
+        "link": "https://pan.miaowcham.top/"
+    },
+    {
+        "icon": "Github",
+        "name": "Github",
+        "link": "https://github.com/MiaowCham/"
+    },
+    {
+        "icon": "CompactDisc",
+        "name": "网易云",
+        "link": "https://y.music.163.com/m/user?id=3962947042"
+    },
+    {
+        "icon": "Spotify",
+        "name": "Spotify",
+        "link": "https://open.spotify.com/user/31raqng3zta444ulyftn656y4pai?si=PGCHZIXWS--jc5G21gxm9w"
+    },
+    {
+        "icon": "HeartRegular",
+        "name": "爱发电",
+        "link": "https://afdian.com/a/MiaowCham"
+    }
+]
