@@ -14,10 +14,9 @@
             {{ fullYear }}
             <a :href="siteUrl">{{ siteAuthor }}</a>
           </span>
-          &
           <!-- 以下信息请不要修改哦 -->
           <span class="hidden">
-            Made&nbsp;by
+            & Made&nbsp;by
             <a :href="config.github" target="_blank">
               {{ config.author }}
             </a>
