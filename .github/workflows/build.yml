@@ -1,0 +1,59 @@
+# 构建并部署到 GitHub Pages
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+# 设置 GITHUB_TOKEN 的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 构建工作
+  build:
+    name: Build Website
+    runs-on: ubuntu-latest
+    steps:
+      # 检出 Git 仓库
+      - name: Check out git repository
+        uses: actions/checkout@v4.1.1
+      # 安装 Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v4.0.0
+        with:
+          node-version: "18.x"
+      # 安装项目依赖
+      - name: Install Dependencies
+        run: npm install
+      # 构建程序
+      - name: Build Website
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 上传构建产物到 GitHub Pages
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
