@@ -1,20 +1,22 @@
-# Hi there 👋 I'm 喵锵 (MiaowCham)
+# 喵锵的主页
 
 > [!note]
-> My English isn’t perfect—I use translation tools sometimes, But I will work hard to learn it.😄
+> 主页网址: [miaowcham.top](miaowcham.top)
 
-My name is 喵锵 (MiaowCham). In fact, I got this name from looking it up in the dictionary 💦  
-I'm a passionate open-source enthusiast from Zhejiang, China. As a hobbyist developer, I hope my project can help some people.🙏  
-However, in the latter half of the year, I'll be heading to Qingdao, Shandong, China to continue my education, so I may not be as active in the community as before 🥲 But don't worry—I'm sure I'll be back soon!
+一个简洁美观的个人主页，集成了天气、音乐播放器、网站导航等实用功能。
 
-## 🥰 What I'm Into
-- 🔭 I’m currently working on AI projects.
-- ⬇️ I like to use Markdown to create documents.
-- 🐍 I am trying to self-learn Python through AI and complete some projects.
-- 📺 I might post some videos on [Bilibili](https://space.bilibili.com/485769432).
+## 特色功能
 
-## 📫 How to reach me:
-- 📧 Email: mcyyds1234@outlook.com
-- 📧 QQMail: QQ@miaowcham.top
-- 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)
-- ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
+- 🌤️ 实时天气显示
+- 🎵 在线音乐播放器
+- 🔗 个人网站导航
+- 🎨 多种背景壁纸选择
+- 📱 响应式设计，支持移动端
+
+## 技术栈
+
+基于 [imsyy/home](https://github.com/imsyy/home) 项目开发，使用 Vue 3 + Vite 构建。
+
+## 许可证
+
+除图片资源外，本项目基于 MIT 许可证开源。
