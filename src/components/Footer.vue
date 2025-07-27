@@ -14,6 +14,7 @@
             {{ fullYear }}
             <a :href="siteUrl">{{ siteAuthor }}</a>
           </span>
+          &
           <!-- 以下信息请不要修改哦 -->
           <span class="hidden">
             Made&nbsp;by
@@ -34,9 +35,9 @@
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
-          <div class="lrc-all" :key="store.getPlayerLrc">
+          <div class="lrc-all" :key="displayLrc">
             <music-one theme="filled" size="18" fill="#efefef" />
-            <span class="lrc-text text-hidden" v-html="store.getPlayerLrc" />
+            <span class="lrc-text" v-html="displayLrc" />
             <music-one theme="filled" size="18" fill="#efefef" />
           </div>
         </Transition>
@@ -52,6 +53,40 @@ import config from "@/../package.json";
 
 const store = mainStore();
 const fullYear = new Date().getFullYear();
+
+// 歌词字符数限制
+const maxLrcLength = ref(50); // 默认限制50个字符
+
+// 根据屏幕宽度调整字符数限制
+const updateMaxLength = () => {
+  const width = window.innerWidth;
+  if (width <= 480) {
+    maxLrcLength.value = 20; // 小屏幕限制20个字符
+  } else if (width <= 720) {
+    maxLrcLength.value = 30; // 中等屏幕限制30个字符
+  } else {
+    maxLrcLength.value = 50; // 大屏幕限制50个字符
+  }
+};
+
+// 处理歌词显示的计算属性
+const displayLrc = computed(() => {
+  const lrc = store.getPlayerLrc;
+  if (!lrc || lrc.length <= maxLrcLength.value) {
+    return lrc;
+  }
+  return lrc.substring(0, maxLrcLength.value) + '...';
+});
+
+// 监听窗口大小变化
+onMounted(() => {
+  updateMaxLength();
+  window.addEventListener('resize', updateMaxLength);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateMaxLength);
+});
 
 // 加载配置数据
 // const siteStartDate = ref(import.meta.env.VITE_SITE_START);

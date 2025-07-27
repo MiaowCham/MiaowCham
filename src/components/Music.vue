@@ -154,6 +154,14 @@ watch(
   align-items: center;
   flex-direction: column;
   animation: fade 0.5s;
+  transform: scale(1);
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
   .btns {
     display: flex;
     align-items: center;
@@ -255,9 +263,11 @@ watch(
   margin: auto;
   width: 100%;
   height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: #00000080;
   backdrop-filter: blur(20px);
-  z-index: 1;
+  z-index: 9999;
   .list {
     position: absolute;
     display: flex;

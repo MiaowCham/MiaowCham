@@ -4,9 +4,9 @@
     <!-- Logo -->
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
-      <div :class="{ name: true, long: siteUrl[0].length >= 6 }">
-        <span class="bg">{{ siteUrl[0] }}</span>
-        <span class="sm">{{ siteUrl[1] }}</span>
+      <div :class="{ name: true, long: siteBgName.length >= 6 }">
+        <span class="bg">{{ siteBgName }}</span>
+        <span class="sm">{{ siteSmName }}</span>
       </div>
     </div>
     <!-- 简介 -->
@@ -44,17 +44,9 @@ onMounted(() => {
 
 // 主页站点logo
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
-// 站点链接
-const siteUrl = computed(() => {
-  const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "imsyy.top".split(".");
-  // 判断协议前缀
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    const urlFormat = url.replace(/^(https?:\/\/)/, "");
-    return urlFormat.split(".");
-  }
-  return url.split(".");
-});
+// 站点名称
+const siteBgName = import.meta.env.VITE_SIDE_BGNAME || "喵锵";
+const siteSmName = import.meta.env.VITE_SIDE_SMNAME || "MiaowCham";
 
 // 一言数据
 const hitokotoData = reactive({
@@ -92,14 +84,9 @@ const changeBox = () => {
   if (store.getInnerWidth >= 721) {
     store.boxOpenState = !store.boxOpenState;
   } else {
-    ElMessage({
-      message: "当前页面宽度不足以开启盒子",
-      grouping: true,
-      icon: h(Error, {
-        theme: "filled",
-        fill: "#efefef",
-      }),
-    });
+    // 移动端：关闭移动端菜单，打开盒子作为独立页面
+    store.mobileOpenState = false;
+    store.boxOpenState = true;
   }
 };
 
@@ -128,7 +115,7 @@ watch(
     max-width: 460px;
     .logo-img {
       border-radius: 70%;
-      width: 180px;
+      width: 140px;
     }
     .name {
       width: 100%;
@@ -143,15 +130,17 @@ watch(
 
       .sm {
         margin-left: 6px;
+        margin-right: 20px;
         font-size: 2rem;
-        @media (min-width: 721px) and (max-width: 789px) {
+        font-family: "HarmonyOS-Black", "Pacifico-Regular", sans-serif;
+        @media (min-width: 721px) and (max-width: 750px) {
           display: none;
         }
       }
     }
     @media (max-width: 768px) {
       .logo-img {
-        width: 180px;
+        width: 120px;
       }
       .name {
         height: 128px;
@@ -205,31 +194,51 @@ watch(
     }
     @media (max-width: 720px) {
       max-width: 100%;
-      pointer-events: none;
     }
   }
-  // @media (max-width: 390px) {
-  //   .logo {
-  //     flex-direction: column;
-  //     .logo-img {
-  //       display: none;
-  //     }
-  //     .name {
-  //       margin-left: 0;
-  //       height: auto;
-  //       transform: none;
-  //       text-align: center;
-  //       .bg {
-  //         font-size: 3.5rem;
-  //       }
-  //       .sm {
-  //         font-size: 1.4rem;
-  //       }
-  //     }
-  //   }
-  //   .description {
-  //     margin-top: 2.5rem;
-  //   }
-  // }
+  @media (max-width: 400px) {
+    .logo {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .logo-img {
+         width: 150px;
+         margin-bottom: 1rem;
+       }
+      .name {
+         padding-left: 0;
+         height: auto;
+         transform: none;
+         text-align: center;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         .bg {
+           font-size: 3.5rem;
+         }
+         .sm {
+           font-size: 1.4rem;
+           margin-left: 0;
+           margin-right: 0;
+         }
+       }
+    }
+    .description {
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 390px) {
+    .logo {
+      .name {
+         .bg {
+           font-size: 3rem;
+         }
+         .sm {
+           font-size: 1.2rem;
+         }
+       }
+    }
+  }
 }
 </style>

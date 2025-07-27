@@ -51,6 +51,17 @@ const closeShow = ref(false);
     transform: scale(1);
   }
 
+  // 移动端显示
+  @media (max-width: 720px) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
   .close,
   .setting {
     position: absolute;

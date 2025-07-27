@@ -8,7 +8,7 @@
     <main id="main" v-if="store.imgLoadStatus">
       <div class="container" v-show="!store.backgroundShow">
         <section class="all" v-show="!store.setOpenState">
-          <MainLeft />
+          <MainLeft v-show="!(store.boxOpenState && store.innerWidth < 721)" />
           <MainRight v-show="!store.boxOpenState" />
           <Box v-show="store.boxOpenState" />
         </section>
@@ -20,14 +20,14 @@
       <Icon
         class="menu"
         size="24"
-        v-show="!store.backgroundShow"
+        v-show="!store.backgroundShow && !(store.boxOpenState && store.innerWidth < 721)"
         @click="store.mobileOpenState = !store.mobileOpenState"
       >
         <component :is="store.mobileOpenState ? CloseSmall : HamburgerButton" />
       </Icon>
       <!-- 页脚 -->
       <Transition name="fade" mode="out-in">
-        <Footer class="f-ter" v-show="!store.backgroundShow && !store.setOpenState" />
+        <Footer class="f-ter" v-show="!store.backgroundShow && !store.setOpenState && !(store.boxOpenState && store.innerWidth < 721)" />
       </Transition>
     </main>
   </Transition>
@@ -70,7 +70,7 @@ watch(
   () => store.innerWidth,
   (value) => {
     if (value < 721) {
-      store.boxOpenState = false;
+      // 移动端时只关闭设置页面，保留盒子状态
       store.setOpenState = false;
     }
   },
@@ -190,13 +190,13 @@ onBeforeUnmount(() => {
       display: none;
     }
   }
-  @media (max-height: 720px) {
+  @media (max-height: 680px) {
     overflow-y: auto;
     overflow-x: hidden;
     .container {
-      height: 721px;
+      height: 681px;
       .more {
-        height: 721px;
+        height: 681px;
         width: calc(100% + 6px);
       }
       @media (min-width: 391px) {
@@ -222,31 +222,32 @@ onBeforeUnmount(() => {
       }
     }
     .menu {
-      top: 605.64px; // 721px * 0.84
+      top: 572.04px; // 681px * 0.84
       left: 170.5px; // 391 * 0.5 - 25px
       @media (min-width: 391px) {
         left: calc(50% - 25px);
       }
     }
     .f-ter {
-      top: 675px; // 721px - 46px
+      top: 635px; // 681px - 46px
       @media (min-width: 391px) {
         padding-left: 6px;
       }
     }
   }
   @media (max-width: 390px) {
-    overflow-x: auto;
+    overflow-x: hidden;
     .container {
-      width: 391px;
+      width: 100%;
+      min-width: 320px;
     }
     .menu {
-      left: 167.5px; // 391px * 0.5 - 28px
+      left: calc(50% - 28px);
     }
     .f-ter {
-      width: 391px;
+      width: 100%;
     }
-    @media (min-height: 721px) {
+    @media (min-height: 681px) {
       overflow-y: hidden;
     }
   }
