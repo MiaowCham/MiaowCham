@@ -19,13 +19,13 @@
     {
         "name": "爱发电",
         "icon": "/images/icon/coffee.png",
-        "tip": "给作者买杯咖啡",
+        "tip": "给作者买一顿 KFC",
         "url": "https://afdian.com/a/MiaowCham"
     },
     {
         "name": "Email",
         "icon": "/images/icon/email.png",
-        "tip": "来封 Email ~",
+        "tip": "什么年代了还用电子邮件？",
         "url": "mailto:mcyyds1234@outlook.com"
     }
 ]
