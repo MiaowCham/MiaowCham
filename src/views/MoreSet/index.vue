@@ -67,6 +67,7 @@ const siteSmName = import.meta.env.VITE_SIDE_SMNAME || "MiaowCham";
 // 更新日志
 const upData = reactive({
   new: [
+    "布局优化，更多移动端适配",
     "采用 Vue 进行重构",
     "音乐歌单支持快速自定义",
     "壁纸支持个性化设置",
