@@ -18,9 +18,10 @@
       
       <h2>🥰 What I'm Into</h2>
       <ul>
+        <li>📃 I'm using Markdown and a static site generator to build <a href="https://miaowcham.top/" rel="nofollow">My Personal Website</a>.</li>
         <li>🔭 I'm currently working on AI projects.</li>
         <li>⬇️ I like to use Markdown to create documents.</li>
-        <li>🐍 I am trying to self-learn Python through AI and complete some projects.</li>
+        <li>🐍 I'm trying to self-learn Python through AI and complete some projects.</li>
         <li>📺 I might post some videos on <a href="https://space.bilibili.com/485769432" target="_blank">Bilibili</a>.</li>
       </ul>
       
