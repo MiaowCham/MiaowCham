@@ -9,10 +9,10 @@ I'm a passionate open-source enthusiast from Zhejiang, China. As a hobbyist deve
 However, in the latter half of the year, I'll be heading to Qingdao, Shandong, China to continue my education, so I may not be as active in the community as before 🥲 But don't worry—I'm sure I'll be back soon!
 
 ## 🥰 What I'm Into
-- 📃 I‘m using Markdown and a static site generator to build [My Personal Website](https://miaowcham.top/).
-- 🔭 I’m currently working on AI projects.
+- 📃 I'm using Markdown and a static site generator to build [My Personal Website](https://miaowcham.top/).
+- 🔭 I'm currently working on AI projects.
 - ⬇️ I like to use Markdown to create documents.
-- 🐍 I’m trying to self-learn Python through AI and complete some projects.
+- 🐍 I'm trying to self-learn Python through AI and complete some projects.
 - 📺 I might post some videos on [Bilibili](https://space.bilibili.com/485769432).
 
 ## 📫 How to reach me:
