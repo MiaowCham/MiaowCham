@@ -25,7 +25,7 @@
         <!-- 站点备案 -->
         <div v-if="siteIcp" class="icp-line">
           <span v-if="!siteIcpSide">
-            {{ siteIcp }}
+            {{ siteIcp }}<br>主页大图及网站Logo作者为米画师@和了个肆，详见<a href='https://oc.miaowcham.com/pictures/character#喵锵-设定图'>设定站说明</a>
           </span>
           <a v-else :href="siteIcpSide" target="_blank">
             {{ siteIcp }}
