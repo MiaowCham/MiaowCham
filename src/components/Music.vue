@@ -89,6 +89,7 @@ const volumeNum = ref(store.musicVolume ? store.musicVolume : 0.7);
 // 播放列表数据
 const musicListShow = ref(false);
 const playerRef = ref(null);
+const scrollPosition = ref(0);
 const playerData = reactive({
   server: import.meta.env.VITE_SONG_SERVER,
   type: import.meta.env.VITE_SONG_TYPE,
@@ -99,12 +100,32 @@ const playerData = reactive({
 const openMusicList = () => {
   musicListShow.value = true;
   playerRef.value.toggleList();
+  // 保存当前滚动位置
+  scrollPosition.value = window.pageYOffset || document.documentElement.scrollTop;
+  // 固定页面在顶部并禁止滚动
+  document.body.style.cssText = `
+    overflow: hidden !important;
+    position: fixed !important;
+    top: -${scrollPosition.value}px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  `;
+  document.documentElement.style.cssText = `
+    overflow: hidden !important;
+    height: 100% !important;
+  `;
 };
 
 // 关闭播放列表
 const closeMusicList = () => {
   musicListShow.value = false;
   playerRef.value.toggleList();
+  // 恢复页面滚动
+  document.body.style.cssText = '';
+  document.documentElement.style.cssText = '';
+  // 恢复滚动位置
+  window.scrollTo(0, scrollPosition.value);
 };
 
 // 音乐播放暂停

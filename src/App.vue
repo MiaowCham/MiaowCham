@@ -194,9 +194,7 @@ onBeforeUnmount(() => {
     overflow-y: auto;
     overflow-x: hidden;
     .container {
-      height: 681px;
       .more {
-        height: 681px;
         width: calc(100% + 6px);
       }
       @media (min-width: 391px) {
@@ -222,14 +220,12 @@ onBeforeUnmount(() => {
       }
     }
     .menu {
-      top: 572.04px; // 681px * 0.84
       left: 170.5px; // 391 * 0.5 - 25px
       @media (min-width: 391px) {
         left: calc(50% - 25px);
       }
     }
     .f-ter {
-      top: 635px; // 681px - 46px
       @media (min-width: 391px) {
         padding-left: 6px;
       }
