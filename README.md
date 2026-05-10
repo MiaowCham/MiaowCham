@@ -1,7 +1,7 @@
 # 喵锵的主页
 
 > [!note]
-> 主页网址: [miaowcham.top](miaowcham.top)
+> 主页网址: [miaowcham.com](https://miaowcham.com)
 
 一个简洁美观的个人主页，集成了天气、音乐播放器、网站导航等实用功能。
 

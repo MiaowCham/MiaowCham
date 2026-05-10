@@ -18,7 +18,7 @@
       
       <h2>🥰 What I'm Into</h2>
       <ul>
-        <li>📃 I'm using Markdown and a static site generator to build <a href="https://miaowcham.top/" rel="nofollow">My Personal Website</a>.</li>
+        <li>📃 I'm using Markdown and a static site generator to build <a href="https://miaowcham.com/" rel="nofollow">My Personal Website</a>.</li>
         <li>🔭 I'm currently working on AI projects.</li>
         <li>⬇️ I like to use Markdown to create documents.</li>
         <li>🐍 I'm trying to self-learn Python through AI and complete some projects.</li>
@@ -28,7 +28,7 @@
       <h2>📫 How to reach me:</h2>
       <ul>
         <li>📧 Email: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a></li>
-        <li>📧 QQMail: <a href="mailto:qq@miaowcham.top" target="_blank">qq@miaowcham.top</a></li>
+        <li>📧 QQMail: <a href="mailto:qq@miaowcham.com" target="_blank">qq@miaowcham.com</a></li>
         <li>🐧 QQ: <a href="https://qm.qq.com/q/qjU8Nm72fe" target="_blank">2049669820</a></li>
         <li>✈️ Telegram: <a href="https://t.me/miaowcham" target="_blank">@MiaowCham</a></li>
       </ul>

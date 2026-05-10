@@ -1,12 +1,12 @@
 [{
         "icon": "FileWord",
         "name": "文档中心",
-        "link": "https://docs.miaowcham.top/"
+        "link": "https://docs.miaowcham.com/"
     },
     {
         "icon": "Book",
-        "name": "设定站",
-        "link": "https://oc.miaowcham.top/"
+        "name": "设定站(已过时)",
+        "link": "https://oc.miaowcham.com/"
     },
     {
         "icon": "Github",
