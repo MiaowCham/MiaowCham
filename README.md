@@ -20,3 +20,9 @@ However, in the latter half of the year, I'll be heading to Qingdao, Shandong, C
 - 📧 QQMail: QQ@miaowcham.com
 - 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)
 - ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
+
+### ☕️ Buy me a coffee
+- 💴 e-CNY ID：`0071130812093028`
+- 💵 USDT APTOS Address：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984`
+- 🟦 PayPal Account：`2049669820@qq.com`
+- 💗 爱发电：[MiaowCham](https://afdian.com/a/MiaowCham)
