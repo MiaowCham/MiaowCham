@@ -6,7 +6,7 @@
 
 My name is 喵锵 (MiaowCham). In fact, I got this name from looking it up in the dictionary 💦  
 I'm a passionate open-source enthusiast from Zhejiang, China. As a hobbyist developer, I hope my project can help some people.🙏  
-However, in the latter half of the year, I'll be heading to Qingdao, Shandong, China to continue my education, so I may not be as active in the community as before 🥲 But don't worry—I'm sure I'll be back soon!
+However, I'll be heading to Qingdao, Shandong, China to continue my education, so I may not be as active in the community as before 🥲 But don't worry—I'm sure I'll be back soon!
 
 ## 🥰 What I'm Into
 - 📃 I'm using Markdown and a static site generator to build [My Personal Website](https://miaowcham.com/).
